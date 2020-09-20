@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",removeLoading);
 function removeLoading(e){
     setTimeout(() => {
         document.getElementsByClassName("loaderWrapper")[0].setAttribute('style', "display : none !important")
-    }, 500);
+    }, 700);
 
 }
 
