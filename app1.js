@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded",removeLoading);
+
+function removeLoading(e){
+    setTimeout(() => {
+        document.getElementsByClassName("loaderWrapper")[0].setAttribute('style', "display : none !important")
+    }, 500);
+
+}
+
+
+
+
+
 document.addEventListener("scroll",isc);
 var Mainbody = document.getElementById("body");
 function isc(e){
