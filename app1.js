@@ -6,17 +6,9 @@ function removeLoading(e){
     }, 700);
 
 }
-
-
-
-
-
 document.addEventListener("scroll",isc);
 var Mainbody = document.getElementById("body");
 function isc(e){
-    // if(imgArry.length=== 0 ){
-        
-    // }
     
     if(Mainbody.offsetHeight-(window.innerHeight + window.scrollY) <= 50)
     {   
@@ -25,33 +17,11 @@ function isc(e){
         body.appendChild(newElm);
         
         createNewImg();
-    }
-
-    
+    } 
 }
-
-
 let imgArry =[];
 for(i=1; i<=41; i++){
 imgArry.push("image"+i);}
-
-// document.getElementById("radio1").addEventListener("click", function(e){
-//     let images = document.getElementsByTagName("img");
-//     for(i=0; i<images.length; i++){
-//         images[i].classList.add("grayscale");
-//     }
-// })
-// document.getElementById("radio2").addEventListener("click", function(e){
-//     let images = document.getElementsByTagName("img");
-//     for(i=0; i<images.length; i++){
-//         images[i].classList.remove("grayscale");
-//     }
-// })
-
-
-
-
-
 function createNewImg(){
     let array = imgArry;
     if(array.length < 2 ){
@@ -69,14 +39,8 @@ function createNewImg(){
         item.className="item";
         let randomImg = array[randomNumber]
         array.splice(randomNumber,1);
-        
-    
-    
         item.innerHTML="<img src='./img/"+ randomImg +".png'>";
-    
-        // item.innerHTML="<img src='./img/image" + random + ".png'>";
         lastContainer.appendChild(item);
-
     }
     else{
     let randomNumber = Math.floor((Math.random()*array.length));
@@ -86,11 +50,7 @@ function createNewImg(){
     item.className="item";
     let randomImg = array[randomNumber]
     array.splice(randomNumber,1);
-
-
     item.innerHTML="<img src='./img/"+ randomImg +".png'>";
-
-    // item.innerHTML="<img src='./img/image" + random + ".png'>";
     lastContainer.appendChild(item);
 
     }
